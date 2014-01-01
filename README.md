@@ -1,4 +1,5 @@
-# Cap::Templates
+cap-templates
+=============
 
 Capistrano plugin that resolved .erb files on deploy
 
