@@ -11,8 +11,8 @@ Capistrano::Configuration.instance(:must_exist).load do
   end
 
   def resolve_template(file)
-    resolved_file_name = File.expand_path("../#{file}", __FILE__)
-    resolved_content = from_template(resolved_file_name)
+    template_file_name = File.join(Dir.pwd, "config", file) 
+    resolved_content = from_template(template_file_name)
     put resolved_content, File.join(release_path, "config", file).gsub(/\.erb$/, "")
   end
 
