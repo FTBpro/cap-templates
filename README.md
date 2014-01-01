@@ -32,7 +32,10 @@ set :erb_templates, ['nginx/configuration.erb' ,'unicorn.rb.erb']
 ```
 
 Files inside `erb_templates` are relative to your `root_path/config/` directory.
-They will be resolved to the filename with the .erb extention omitted.
+
+These files will be resolved to the filename with the .erb extention omitted.
+
+The template files are not deleted in the process
 
 ## Contributing
 
